@@ -1,0 +1,18 @@
+#N canvas 389 316 563 201 12;
+#X obj 9 6 inlet~;
+#X obj 59 6 inlet signal-gain;
+#X obj 186 6 inlet post-delay-gain;
+#X obj 9 170 outlet~ filtered-signal;
+#X obj 44 50 delwrite~ \$0-ffc-buffer \$1;
+#X obj 9 49 *~;
+#X obj 9 137 +~;
+#X obj 44 111 *~;
+#X obj 44 82 delread~ \$0-ffc-buffer \$1;
+#X connect 0 0 5 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 1;
+#X connect 2 0 7 1;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
