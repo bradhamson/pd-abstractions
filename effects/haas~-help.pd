@@ -1,0 +1,20 @@
+#N canvas 111 99 451 301 12;
+#X obj 14 15 haas~;
+#X text 63 15 - stereo widener;
+#X text 12 45 takes a signal in the left inlet and an offset in ms
+(1-30ms) in the right or as a creation arg. emulates the haas effect
+by adding a slight delay to the right channel outlet. left channel
+outlet is original signal;
+#X msg 342 116 \; pd dsp 1;
+#X msg 342 159 \; pd dsp 0;
+#X obj 22 204 haas~;
+#X obj 97 131 vsl 15 50 1 30 0 1 empty empty ms 0 -9 0 10 -262144 -1
+-1 2000 1;
+#X floatatom 97 191 5 0 0 0 - - -;
+#X obj 22 164 osc~ 440;
+#X obj 25 241 dac~;
+#X connect 5 0 9 0;
+#X connect 5 1 9 1;
+#X connect 6 0 5 1;
+#X connect 6 0 7 0;
+#X connect 8 0 5 0;
