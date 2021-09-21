@@ -1,0 +1,17 @@
+#N canvas 51 81 450 300 12;
+#X obj 129 54 sphere.surfarea;
+#X obj 20 55 sphere.volume;
+#X obj 105 103 /;
+#X obj 129 78 t b f;
+#X obj 105 127 * 4;
+#X obj 105 151 outlet;
+#X text 157 152 sphere mean free path;
+#X obj 79 12 inlet room-size;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 4 0 5 0;
+#X connect 7 0 0 0;
+#X connect 7 0 1 0;

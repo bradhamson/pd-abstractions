@@ -1,0 +1,10 @@
+#N canvas 0 23 330 175 12;
+#X obj 12 41 samplerate~;
+#X obj 12 68 / 1000;
+#X obj 12 92 outlet;
+#X obj 12 15 inlet;
+#X text 70 93 sample period in seconds;
+#X text 64 15 bang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
