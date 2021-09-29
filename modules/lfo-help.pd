@@ -1,0 +1,29 @@
+#N canvas 561 216 576 348 12;
+#X obj 20 12 lfo, f 7;
+#X text 83 12 - control signal lfo;
+#X text 18 46 outlet provides float for current point on wave \, can
+be used to control other objects. takes a frequency between 0.01 to
+20 hz in the left inlet or as creation argument. bang the center inlet
+to sync the lfo with other osc's. depth between 0.01 to 20 in the right
+inlet.;
+#X floatatom 27 294 10 0 0 0 - - -;
+#X obj 30 151 hsl 128 15 0.01 20 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2500 1;
+#X obj 69 210 hsl 128 15 0.01 20 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4000 1;
+#X obj 30 325 hsl 128 15 -20 20 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8043 1;
+#X obj 27 270 lfo, f 6;
+#X obj 365 136 loadbang;
+#X msg 365 160 \; pd dsp 1 \;;
+#X msg 87 235 10;
+#X msg 43 179 0.2;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 2;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 8 0 11 0;
+#X connect 8 0 10 0;
+#X connect 10 0 7 2;
+#X connect 11 0 7 0;
